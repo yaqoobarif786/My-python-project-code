@@ -1,0 +1,828 @@
+1- Create a class called Person with attributes name and age. Create an object of the class and print its attributes.
+ 
+class Person:
+
+    def __init__ (self, name, age):
+        self.name = name
+        self.age = age
+    def __str__ (self):
+        return self.name+"\t"+str(self.age)
+
+p1 = Person("Abdul ghafar", 19)
+print(p1)
+
+2- Add a method called greet to the Person class that prints a greeting message including the person's name.
+ 
+class Person:
+    def __init__ (self, name, age):
+        self.name = name
+        self.age = age
+        
+        
+    def __str__ (self):
+        return self.name+"\t"+str(self.age)
+    
+    def greet(self):
+        print("Hello Abdul ghafar! How are you.")
+        
+p1 = Person("Abdul ghafar", 19)
+p1.greet()
+
+3- Create a class called Car with attributes make, model and year. Including a method to print out the car's details.
+ 
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        
+    def __str__ (self):
+        return self.make+'\t'+self.model+'\t'+str(self.year)
+    
+    def car_details (self):
+        print(self)
+        
+c1 = Car("Benze", "Toyota", 2010)
+c1.car_details()
+
+4- Create a class Circle with a method to compute the area. Initialize the class with the radius.
+ 
+class Circle:
+    def __init__ (self, radius):
+        self.radius = radius
+        
+    def compute_area(self):
+        area = 3.141592653589793 * self.radius ** 2
+        print("The area of your circle is:", area)
+        
+c1 = Circle(2.667535)
+c1.compute_area()
+
+5- Create a class Rectangle with methods to compute the area and perimeter. Initialize the class with the length and width.
+ 
+
+class Rectangle:
+    def __init__ (self, length, width):
+        self.length = length
+        self.width = width
+        
+    def compute_area_perimeter(self):
+        area = self.length * self.width
+        perimeter = (self.length + self.width) * 2
+        print("The area of your rectangle is:", area)
+        print("The perimeter of your rectangle is:", perimeter)
+        
+r1 = Rectangle(23, 24)
+r1.compute_area_perimeter()
+
+6- Create a base class Animal with a method speak. Create two derived classes Dog and Cat that override the speak method.
+
+class Animal:
+    def speak(self):
+        print("Different animals has different voice.")
+        
+class Dog(Animal):
+    def speak(self):
+        print("Dogs barks!")
+        
+class Cat(Animal):
+    def speak(self):
+        print("Cats meows!")
+        
+a1 = Animal()
+a1.speak()
+d1 = Dog()
+d1.speak()
+c1 = Cat()
+c1.speak()
+
+7- Create a base class Shape with a method area. Create derived classes Square and Triangle  that implement the area method.
+
+class Shape:
+    def area(self):
+        print("Different shapes has different areas.")
+        
+class Square(Shape):
+    print("This is the square class.")
+    
+class Triangle(Shape):
+    print("This is the triangle class.")
+    
+s1 = Shape()
+s1.area()
+sq1 = Square()
+sq1.area()
+t1 = Triangle()
+t1.area()
+
+8- Create a class Employee with attributes name and salary. Create a derived class Manager with an additional attribute department.
+
+class Employee:
+    def __init__ (self, name, salary):
+        self.name = name
+        self.salary = salary
+        
+    def __str__ (self):
+        return self.name+"\t"+str(self.salary)
+    
+    
+class Manager(Employee):
+    def __init__ (self, name, salary, department):
+        Employee.__init__ (self, name, salary)
+        self.department = department
+        
+    def __str__ (self):
+        return self.name+"\t"+str(self.salary)+"\t"+self.department
+        
+e1 = Employee("Abdul ghafar", 90000)
+print(e1)
+m1 = Manager("Abdul ghafar", 90000, "IT")
+print(m1)
+
+9- Create a base class Vehicle with a method drive. Create derived classes Bike and Truck that override the drive method.
+
+class Vehicle:
+    def drive(self):
+        print("You can drive a vehicle.")
+        
+class Bike(Vehicle):
+    def drive(self):
+        print("Ridding a bike is very good for health.")
+        
+class Truck(Vehicle):
+    def drive(self):
+        print("Driving a truck is so boring.")
+        
+v1 = Vehicle()
+b1 = Bike()
+t1 = Truck()
+v1.drive()
+b1.drive()
+t1.drive()
+
+10- Create a base class Bird with a method fly. Create derived classes Eagle and Penguin. Override the fly method in Penguin to indicate that penguins cannot fly.
+
+class Bird:
+    def fly(self):
+        print("Every bird can fly.")
+        
+class Eagle(Bird):
+    print("Eagle is a meet-eating bird.")
+        
+class Penguin(Bird):
+    def fly(self):
+        print("Penguins cannot fly.")
+        
+b1 = Bird()
+p1 = Penguin()
+b1.fly()
+p1.fly()
+
+11- Create a class Account with private attributes balance. Provide public methods to deposit and withdraw money.
+
+class Account:
+    def __init__ (self, balance ):
+        self.__balance = balance
+        
+        
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            return True
+        return False
+    
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+            return True
+        return False
+    def get_balance(self):
+        print(self.__balance)
+    
+    def __str__(self):
+        return str(self.__balance)
+    
+ac1 = Account(0)
+ac1.deposit(49)
+ac1.withdraw(34)
+ac1.get_balance()
+
+12- Create a class Book with private attributes title, author and pages. Provide public methods to get and set these attributes.
+
+class Book:
+    def __init__ (self, title, author, pages):
+        self.__title = title
+        self.__author = author
+        self.__pages = pages
+        
+    def get_title(self):
+        print(self.__title)
+    def set_title(self, tilte):
+        self.__tilte = title
+        print(title)
+    def get_author(self):
+        print(self.__author)
+    def set_author(self, author):
+        self.__author = author
+        print(author)
+    def get_pages(self):
+        print(self.__pages)
+    def set_pages(self, pages):
+        self.__pages = pages
+        print(pages)
+        
+bo1 = Book("zoo", "ali", 34)
+bo1.get_author()
+bo1.set_author("mohammad")
+bo1.get_title()
+bo1.get_pages()
+bo1.set_pages(45634)
+
+13- Create a class Laptop withe private attributes brand, model and price. provide a method to apply a discount and a method to display laptop details.
+
+class Laptop:
+    def __init__ (self, brand, model, price):
+        self.__brand = brand
+        self.__model = model
+        self.__price = price
+        
+    def apply_discount(self, discount):
+        if 0 < discount < 1:
+            discount_amount = self.__price * (1 - discount)
+            print("The price of laptop after discount is:", discount_amount)
+            print("The amount of discount is:", self.__price - discount_amount)
+            
+        else:
+            print("false")
+        
+    def display_details(self):
+        print("The laptop brand is:", self.__brand)
+        print("The laptop model is:", self.__model)
+        print("The laptop price is:", self.__price)
+        
+lap1 = Laptop("DELL", "cori 7", 14500)
+lap1.display_details()
+lap1.apply_discount(15/100)
+
+14- Create a class BankAccount with private attributes account_number and balance. provide methods to deposit, withdraw and check the balance.
+
+class Bank_Account:
+    def __init__ (self, account_number, balance):
+        self.__account_number = account_number
+        self.__balance = balance
+        
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            return True
+        return False
+        
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+            return True
+        return False
+        
+    def check_balance(self):
+        print("Your balnce is:", self.__balance)
+        
+ba1 = Bank_Account('Q01017495', 200)
+ba1.check_balance()
+ba1.deposit(400)
+ba1.check_balance()
+ba1.withdraw(300)
+ba1.check_balance()
+
+15- Create a class Student with private attributes name, grade and age. provide methods to get and set these attributes and a method to display the student's detail.
+
+class Student:
+    def __init__ (self, name, grade, age):
+        self.__name = name
+        self.__grade = grade
+        self.__age = age
+        
+    def get_name(self):
+        print(self.__name)
+    def set_name(self, name):
+        self.__name = name
+        print(name)
+    def get_grade (self):
+        print(self.__grade)
+    def set_grade(self, grade):
+        self.__grade = grade
+        print(grade)
+    def get_age(self):
+        print(self.__age)
+    def set_age(self, age):
+        self.__age = age
+        print(age)
+        
+    def student_detail(self):
+        print("The student name is:", self.__name,'\n'
+              "The student grade is:", self.__grade,'\n'
+              "The sthdent age is:",self.__age)
+        
+st1 = Student("Abdul ghafar", "first", 19)
+st1.get_age()
+st1.set_age(23)
+st1.student_detail()
+
+16- Create a class Library with attributes name and books (a list of Book objects). Provide methods to add and remove books.
+
+class Book:
+    def __init__ (self, title, author, page):
+        self.title = title
+        self.author = author
+        self.page = page
+        
+class Library:
+    def __init__ (self, name):
+        self.name = name
+        self.books = []
+        
+    def add_book(self, book):
+        self.books.append(book)
+        
+    def remove_book(self, book):
+        self.books.remove(book)
+        
+b1 = Book("python", "reza dolati", 567)
+b1 = Book("java", "mehdi abbasi", 654)
+lib1 = Library("feqah")
+lib1.add_book(b1)
+
+17- Create a class School with attributes name and students (a list of Student object). Provide methods to add and remove students.
+
+class Student:
+    def __init__ (self, name, grade, age):
+        self.name = name
+        self.grade = grade
+        self.age = age
+class School:
+    def __init__ (self, name):
+        self.name = name
+        self.students = []
+        
+    def add_student(self, student):
+        self.students.append(student)
+        
+    def remove_student(self, student):
+        self.stuednt.remove(student)
+    
+sc1 = School("bahader khan")
+stu1 = Student("Ali", "A", 12)
+stu2 = Student("Reza", "B", 23)
+
+sc1.add_student(stu1)
+sc1.add_student(stu2)
+
+18- Create a class Team with attributes name and members (a list of Person objects). Provide methods to add and remove members.
+
+class Person:
+    def __init__ (self, name, age):
+        self.name = name
+        self.age = age
+        
+class Team:
+    def __init__ (self, name):
+        self.name = name
+        self.members = []
+        
+    def add_member(self, person):
+        self.members.append(person)
+    def remove_member(self, person):
+        self.members.remove(person)
+        
+team1 = Team("Panjshir")
+pe1 = Person("Ali", 234)
+pe2 = Person("Reza", 43)
+team1.add_member(pe1)
+team1.add_member(pe2)
+team1.remove_member(pe2)
+
+19- Create a class Company with attributes name and employees (a list of Employee objects). provide methods to add and remove employees.
+
+class Employee:
+    def __init__ (self, name , salary):
+        self.name = name
+        self.salary = salary
+        
+class Company:
+    def __init__ (self, name):
+        self.name = name
+        self.employees = []
+        
+    def add_employee(self, employee):
+        self.employees.append(employee)
+    def remove_employee(self, employee):
+        self.employees.remove(employee)
+       
+com1 = Company("Super colla")
+emp1 = Employee("Rahamn", 12000)
+emp2 = Employee("Rahim", 13000)
+com1.add_employee(emp1)
+com1.add_employee(emp2)
+com1.remove_employee(emp1)
+        
+20-  Create class Zoo with attributes name and animals (a list of Animal objects). Provide methods to add and remove animals.
+
+class Animal:
+    def __init__ (self, name):
+        self.name = name
+        
+class Zoo:
+    def __init__ (self, name):
+        self.name = name
+        self.animals = []
+        
+    def add_animal(self, animal):
+        self.animals.append(animal)
+    def remove_animal(self, animal):
+        self.animals.remove(animal)
+        
+zoo = Zoo("dehmazang zoo")
+ani1 = Animal("cat")
+ani2 = Animal("dog")
+zoo.add_animal(ani1)
+zoo.add_animal(ani2)        
+zoo.remove_animal(ani1)
+
+21- Create a class FileManager with methods to read and write to a file.
+class FileManager:
+    def __init__ (self,filename):
+        self.filename = filename
+    def read_file(self):
+        try:
+            with open(self.filename,'r') as file:
+                return file.read
+        except FileNotFoundError:
+            print(f"Error: The file {self.filename} was not found.")
+            return None
+    def write_file(self, data):
+        with open(self.filename,'w') as file:
+            file.write (data)
+            
+22- Create a class Log with methods to write error messages to a log file.
+class Log:
+    def __init__ (self, log_file):
+        self.log_file = log_file
+        
+    def write_error(self, message):
+        with open(self.log_file,'a') as file:
+            file.write(f"ERROR: {message}\n")
+            
+23- Create a class Config that reads configuration settings from a file and provides methods to access these settings.
+
+import configparser
+class Config:
+    def __init__ (self, config_file):
+        self.config = configparser.ConfigParser()
+        self.config_file = config_file
+        self.config.read(config_file)
+    def get_setting(self, section, setting):
+        try:
+            return self.config[section][setting]
+        except KeyError:
+            print(f"Error: Setting '{setting}' in section '{section}' not found in{self.config_file}.")
+            return None
+        
+24- Create a class Database that connects to a database and provides methods to execute queries. Handle exceptions if the connection fails.
+
+import sqlite3
+class Database:
+    def __init__ (self, db_file):
+        self.db_file = db_file
+        self.connection = None
+        
+    def connect(self):
+        try:
+            self.connection = sqlite3.connect(self.db_file)
+            print("Database connection successful.")
+        except sqlite3.Error as e:
+            print(f"Error connecting to database: {e}")
+            return False
+        return True
+    def execute_query(self, query):
+        if self.connection:
+            try:
+                cursor = self.connection.cursor()
+                cursor.execute(query)
+                self.connection.commit()
+                return cursor.fetchall()
+            except sqlite3.Error as e:
+                print(f"Error executing query: {e}")
+                return None
+            else:
+                print("No database connection.")
+                return None
+        def close(self):
+            if self.connection:
+                self.connection.close()
+                print("Databae connection closed.")
+                
+25- Create a class REport that generates a report from data in file. provide methods to handle exceptions if the file does not exist or cannot be read.
+
+class Report:
+    def __init__ (self,filename):
+        self.filename = filename
+        
+    def generate_report(self):
+        try:
+            with open(self.filename,'r') as file:
+                data = file.read()
+                return data
+        except FileNotFoundError:
+            print(f"Error: The file {self.dilename} was not found.")
+            return None
+        except IOError:
+            print(f"Error: could not read the file {self.filename}.")
+            return None
+        
+26- Creat a class Ticket for a movie theater with attributes movie_name, seat_number and price. provide methods to display ticket details and apply discounts.
+
+class Ticket:
+    def __init__ (self, movie_name, seat_number, price):
+        self.movie_name = movie_name
+        self.seat.number = seat_number
+        self.price = price
+    
+    def display_details(self):
+        print(f"MOvie: {self.movie_nmae}, seat: {self.seat_number}, Price: ${self.price:.2f}")
+        
+    def apply_discount(self, discount):
+        self.price -= self.price * (discount / 100)
+        
+27- Create a class ShopingCart with methods to add, remove, and display items. Each item should be an object of a class item with attributes name and price.
+
+class item:
+    def __init__ (self, name, price):
+        self.name = name
+        self.price = price
+        
+    def __repr__ (self):
+        return f"{self.name}: ${self.price:.2f}"
+    
+class ShoppingCart:
+    def __init__ (self):
+        self.items = []
+        
+    def add_item(self, item):
+        self.items.append(item)
+    def remove_item(self, item_name):
+        self.items = [item for item in self.items if item.name != item_name]
+    def display_items(self):
+        for item in self.items:
+            print(item)
+            
+28- Create a class Restaurant with attributes name and menu (a list of Item object). Provide methods to add and remove items from the menu.
+
+class Resturant:
+    def __init__ (self, name):
+        self.name = name
+        self.menu = []
+        
+    def add_item_to_menu(self, item):
+        self.menu.append(item)
+    def remove_item_from_menu(self,item_name):
+        self.menu = [item for item in self.menu if item.name != item_name]
+    def display_menu(self):
+        print(f"Menu for {self.name}:")
+        for item in self.menu:
+            print(item)
+            
+29- Create a class Flight with attributes flight_number, destination and passengers (a list of Person objects). provide methods to add and remove passengers.
+
+class Person:
+    def __init__ (self, name):
+        self.name = name
+    def __repr__ (self):
+        return self.name
+class Flight:
+    def __init__ (self, flight_number, destination):
+        self.flight_number = flight_number
+        self.destination = destination
+        self.passengers = []
+    def add_passengers(self, person):
+        self.passengers.append(person)
+    def remove_passengers(self, person_name):
+        self.passengers = [person for person in self.passengers if person.name != person_name]
+    def display_passengers(sels):
+        print(f"Passengers on flight {self.flight_number}to {self.destination}:")
+        for person in self.passengers:
+            print(person)
+            
+30- Create a class Hotel with attributes name and rooms (a list of Room objects). Each room should have attributes room_number and is_occupied. Provide methods to book and checkout rooms.
+
+class Room:
+    def __init__ (self, room_number):
+        self.room_number = room_number
+        self.is_occupied = False
+    def __repr__ (self):
+        status = "Occupied" if self.is_occupied else "Available"
+        return f"Room {self.room_number}: {status}"
+    
+class Hotel:
+    def __init__ (self, name):
+        self.name = name
+        self.rooms = []
+    def add_rooms(self, room):
+        self.rooms.append(room)
+    def book_room(self, room_number):
+        for room in self.rooms:
+            if room.room_number == room_number and not room.is_occupied:
+                room.is_occupied = True
+                return f"Room {room_number} has been booked."
+            return f"Room {room_number} is not available."
+    def checkout_room(self, room_number):
+        for room in self.rooms:
+            if room.room_number == room_number and room.is_occupied:
+                room.is_occupied = False
+                return f"Room {room_number} has been checked out."
+            return f"Room {room_number} is not currently booked."
+    def display_roooms(self):
+        print(f"Rooms in {self.name}:")
+        for room in self.rooms:
+            print(room)
+            
+36- Create a class CounterApp that uses tkinter to create a simple counter GUI with increment and decrement buuttons.
+
+import tkinter as tk
+class CounterApp:
+    def __init__ (self, root):
+        self.root = root
+        self.root.title("Counter App")
+        self.counter = 0
+        self.lable = tk.Lable(rrot, text="0", font=("Helvetica", 24))
+        self.lable.pack()
+        self.increment_button = tk.Button(root, text="Increment", command=self.increment,
+                                          width=10,height=2)
+        self.increment_button.pack(side=tk.LEFT, padx=10, pady=10)
+        self.decrement_button = tk.Button(root, text="Decrement", command=self.decrement,
+                                          width=10,height=2)
+        self.decrement_button.pack(side=tk.RIGHT, padx=10, pady=10)
+    def increment(self):
+        self.counter += 1
+        self.update_lable()
+        
+    def decrement(self):
+        self.counter -= 1
+        self.update_lable()
+    def update_lable(self):
+        self.lable.config(text=str(self.counter))
+        
+if __name__ == "_main-":
+    root = tk.Tk()
+    app = CounterApp(root)
+    root.mainloop()
+
+37- Create a class ToDoApp that uses tkinter to create a to-do list GUI where usres can add and remove tasks.
+
+import tkinter as tk
+from tkinter import messagebox
+class ToDoApp:
+    def __init__ (self, root):
+        self.root = root
+        self.root,title("To-Do list")
+        
+        self.tasks = []
+        self.task_entry = tk.Entry(root, width=40)
+        self.task_entry.pack(pady=10)
+        self.add_task_button = tk.Button(root, text="Add task", command=self.add_task)
+        self.add_task_button.pack(pady=5)
+        self.tasks_listbox = tk.Listbox(root, width=50, height=10)
+        self.tasks_listbox.pack(pady=5)
+        self.remove_task_button = tk.Button(root, text="REmove Task", command=self.remove_task)
+        self,remove_task_button.pack(paddy=5)
+    def add_task(self):
+        task = self.task_entry.get()
+        if task:
+            self.tasks.append(task)
+            self.tasks_listbox.insert(tk.END,task)
+            self.task_entry.delete(0,tk.END)
+        else:
+            messagebox.showwarning ("Warning", "you must enter a task.")
+    def remmove_task(self):
+        selected_task_index = self.tasks_listbox.curselection()
+        if selected_task_index:
+            self.tasks_istbox.delete(selected_task_index)
+            del self.tasks[selected_task_undex[0]]
+        else:
+            messagebox.showwarning("Warning", "You must select a task.")
+if __name__ == "_main_":
+    root= tk.Tk()
+    app = ToDoApp(root)
+    root.mainloop()
+
+38- Create  a class CalculatorApp that uses tkinter to create a simple calculator GUI.
+import tkinter as tk
+class Calculator:
+    def __init__ (self, root):
+        self.root = root
+        self.roor.title("Calculator")
+        self.experssion =""
+        self.display = tk.Entry(root,width=40,borderwidth=5)
+        self.display.gird(row=0,column=0,columnspan=4,pady=10)
+        
+        buttons = ['7','8','9','/','4','5','6','*','1','2','3','-','0','.','=','+',]
+        row, col = 1, 0
+        for button in buttons:
+            tk.Button(root,text=button,padx=20,pady=20,command=lambda b=button:
+                      self.click(b)).grid(row=row,column=col)
+            col += 1
+            if col > 3:
+                col = 1
+                row += 1
+    def click(self, button):
+        if button == "=":
+            try:
+                self.experssion = str(eval(self.experssion))
+                self.display.delete(0,tk.END)
+                
+                self.display.insert(0, self.experssion)
+                
+            except:
+                self.display.delete(0,tk.END)
+                self.display.insert(0, "Error")
+                self.experssion = ""
+        else:
+            self.experssion += button
+            self.display.delete(0, tk.END)
+            self.displayinsert(0,self.experssion)
+if __name__ == "_main_":
+    root = tk.Tk()
+    qpp = CalculatorApp(root)
+    root.mainloop()
+    
+39- Create a class LoginApp that uses tkinter to create a login form GUI.
+import tkinter as tk
+from tkinter import messagebox
+class LoginApp:
+    def __init__ (self, root):
+        self.root = root
+        self.root,title("Login Form")
+        self.username_lable = tk.Lable(root, text="Username:")
+        self.username_lable.pack(pady=5)
+        self.username_entry = tk.Entry(root)
+        self.username_entry.pack(pady=5)
+        self.password_lable = tk.Lable(root, text="password:")
+        self.password_lable.pack(pady=5)
+        self.password_entry = tk.Entry(root, show='*')
+        self.password_entry.pack(pady=5)
+        
+        self.login_buuton = tk.Button(root, text="Login", command=self.login)
+        self.login_button>pack(pady=20)
+        
+    def login(self):
+        username = self.username_entry.get()
+        password = self.password_entry.get()
+        
+        if username == "admin" and password == "password":
+            messagebox.showerror("Login Info", "Invalid Username or Password")
+            
+if __name__ == "_main_":
+    root = tk.Tk()
+    app = LoginApp(root)
+    root.mainloop()
+    
+40- Create a class WeatherApp that uses tkinter to create a weahter information GUI.
+import tkinter as tk
+from tkinter import messagebox
+import requests
+
+class WeatherApp:
+    def __init__ (self, root):
+        self.root = root
+        self.root.title("WeatherApp")
+        
+        self.city_lable = tk.Lable(root, text="City:")
+        self.city_lable.pack(pady=5)
+        self.city_entry = tk.Entry(root)
+        self.city_entry.pack(pady=5)
+        
+        self.get_weather_buuton = tk.Button(root, text="Get weather", command=self.get_weather)
+        self.get_weather_button.pack(pady=20)
+        self.weather_info = tk.Lable(root, text="")
+        self.weather_info.pack(pady=10)
+        
+    def get_weather(self):
+        city = self.city_entry.get()
+        if city:
+            api_key = "your_openweathermap_api_key"
+            url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+            
+            response = requests.get(url)
+            if response.status_code == 200:
+                weather_data = response.json()
+                temperature = weather_data['main']['temp']
+                description = weather_data['weather'][0]['description']
+                self.weather_info.config(text=f"Temperature: {temperature}C\nDescription:{description}")
+            else:
+                messagebox.showerror("Error","City not found")
+        else:
+            messagebox.showwarning("Warning", "You must enter a city")
+            
+if __name__ == "_main_":
+    root = tk.Tk()
+    app = WeatherApp(root)
+    root.mainloop()
+        

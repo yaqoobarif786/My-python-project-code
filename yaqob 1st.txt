@@ -1,0 +1,161 @@
+Python Built in Functions:
+
+-------------------------------------------------------------------------------------------------------------
+1- int() -> "Return an integer number."
+print(int('234'))
+2- ord() -> "Convert an integer representing the Unicode of th specified character."
+print(ord('A'))
+3- abs() -> "Return the absolute value of a number."
+print(abs(34.56))
+4- all() -> "Return True if all items in an iterable object are true."
+print(all("a variable"))
+5- any() -> "Returns True if any item in an iterable object is true."
+print(all("a variable"))
+6- ascii() -> "Returns a readable version of an object. Replace none-ascii characters with escape character."
+print(ascii("a"))
+7- bin() -> "Returns the binary version of a number."
+print(bin(34))
+8- bool() -> "Returns the boolean value of the specified object."
+print(bool("an object"))
+9- bytearray() -> "Returns an array of bytes."
+print(bytearray("an object"))
+-------------------------------------------------------------------------------------------------------------
+10- bytes() -> "Returns a bytes object."
+print(bytes(x))
+11- callable() -> "Returns true if the specified object is callable, otherwise false"
+print(callable("an object"))
+12- classmethod() -> "Converts a method into a class method"
+print(classmethod("A method of a class"))
+13- compile() -> "Returns the specified source as an object, ready to be excuted."
+print(compile("an object"))
+14- complex() -> "Returns a complex number."print(complex(23.23))
+15- delattr() -> "Deletes the specified attribute (property ot method) from specified object."
+print(delattr("a method"))
+16- dict() -> "Returns a dictionary(Array)"
+print(dict("a variable"))
+17- dir() -> "Returns a list of the specified object's properties and methods."
+print(dir("an object"))
+18- divmod() -> "Returns the qoutient and the remainder when argument1 is divided by argument2."
+print(divmod(43545/343463))
+19- enumerate() -> "Takes a collection (e.g. a tuple) and return it as an enumerate object."
+print(enumerate("a set"))
+-------------------------------------------------------------------------------------------------------------
+20- eval() -> "Evaluates and executes an experssion."
+print(eval("a code"))
+21- exec() -> "Executes the specified code or object."
+print(exec("a code or object"))
+22- filter() -> "Use a filter function to exclude items in an iterable object."
+print(filter("an object"))
+23- float() -> "Returns a floating point number."
+print(float(345345))
+24- format() -> "Formats a specified value."
+print(format("a value"))
+25- frozenset() -> "Returns a frozenset object."
+print(frozenset("an object"))
+26- getattr() -> "Returns the value of the specified attribute (property or method)."
+print(getattr("a method"))
+27- globals() -> "Returns the current global symbol table as a dictionary."
+print(globals("a value"))
+28- hasattr() -> "Returns true if the specifiedobject has the specified attribute or method."
+print(hasattr("a method"))
+29- hash() -> "Returns the hash value of a specified object."
+print(hash("an object"))
+-------------------------------------------------------------------------------------------------------------
+30- help() -> "Executes the built-in help system."
+print(help("a function"))
+31- hex() -> "Converts a number into a hexadecimal value."
+print(hex(345345))
+32- id() -> "Returns id of nymber."
+print(id("a variable"))
+33- input() -> "Allowing user input."
+print(input("x:"))
+34- int() -> "Returns an integer number."
+print(int(214.4123))
+35- isinstance() -> "Returns true if a specified object is an instance of a specified object."
+print(isinstance("an object"))
+36- issubclass() -> "Returns true if a specified class is a subclass of a specified object."
+print(issubclass("a class"))
+37- iter() -> "Returns an iterator object."
+print(iter("a value"))
+38- len() -> "Returns the length of an object."
+print(len("a value or object"))
+39- list() -> "Returns a list."
+print(list("a variable"))
+-------------------------------------------------------------------------------------------------------------
+40- locals() -> "Returns an updated dictionary of the current local symbol table."
+print(locals("a dictionary"))
+41- map() -> "Returns the specified iterator with the specified fuction applied to each item."
+print(map("a function"))
+42- max() -> "Returns the largest item in an iterable."
+print(max("an iterable"))
+43- memoryview() -> "Returns a memory view object."
+print(memoryview("an object"))
+44- min() -> "Returns the smallest item in an iterable."
+print(min("a value"))
+45- next() -> "Returns the next item in an iterable."
+print(next("an iterabe"))
+46- object() -> "Returns a new object."
+print(object("a value"))
+47- oct() -> "Converts a number in to an octal."
+print(ocy(345345))
+48- open() -> "Opens a file and returns a file object."
+print(open("a file"))
+49- ord() -> "Converts an integer representing the Unicode of the specified character."
+print(ord("a"))
+--------------------------------------------------------------------------------------------------------------
+50- pow() -> "Returns the value of x to the power of y."
+print(pow(3432453,235))
+51- print() -> "Prints to the standard output device."
+print("hello")
+52- property() -> "Gets, stes, deletes a property."
+print(property("a prperty"))
+53- range() -> "Returns a sequence of numbers, starting from 0 and increments by 1 (by default)."
+print(range("A value"))
+54- repr() -> "Returns a readable version of an objet."
+print(repr("an object"))
+55- reversed() -> "Returns a reversed iterator."
+print(reversed("an iterator."))
+56- round() -> "Rounds a number."
+print(round(45.64))
+57- set() -> "Returns a new set object."
+print(set("a value"))
+58- setattr() -> "Sets an attribute or method of an object."
+print(setattr("a method"))
+59- slice() -> "Returns a slice object."
+print(slice("a value"))
+-------------------------------------------------------------------------------------------------------------
+60- sorted() -> "Returns a sorted list."
+print(sorted("a list"))
+61- staticmethod() -> "Converts a method into a static method."
+print(staticmethod("a method"))
+62- str() -> "Returns a string object."
+print(str("2134213"))
+63- sum() -> "Sums the items of an iterator."
+print(sum("a value"))
+64- super() -> "Returns an object that represents the parent class."
+print(super()."a class")
+65- tuple() -> "Returns a tuple."
+print(tuple("avalue"))
+66- type() -> "Returns the type of an object."
+print(type(x))
+67- vars() -> "Returns the __dict__ property of an object."
+print(vars("an object"))
+68- zip() -> "Returns an iterator, from two or more iterators."
+print(zip("an iterator"))
+69 import -> "Call a module."
+import tkinter
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
